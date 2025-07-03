@@ -60,7 +60,21 @@ outDir: "build", 把dist文件夹改为build文件夹
     "deploy": "gh-pages -d build"
   },
 ```
-执行npm run deploy
+执行npm run deploy，执行成功的结果如下
+```
+$ npm run deploy
+
+> vite-web@0.0.0 deploy
+> gh-pages -d build
+
+Published
+
+```
+然后查看github仓库，发现多了个分支gh-pages，里面全部是静态文件
+gh-pages -d build的工作原理就是
+1.把build文件夹下的文件全部复制到gh-pages分支下
+2.把gh-pages分支下的文件推送到github仓库
+
 
 
 
